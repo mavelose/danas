@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+
+    <color name="gray_light">#E1E4E8</color> <!-- Light background -->
+    <color name="gray">#D1D5DB</color> <!-- Border -->
+    <color name="gray_dark">#6B7280</color> <!-- Text hint color -->
+
+    <color name="primary">#131E3A</color>
+    <color name="secondary">#FFFFFFFF</color>
+</resources>

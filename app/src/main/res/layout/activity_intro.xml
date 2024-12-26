@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".IntroActivity">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/secondary"
+        />
+
+    <!-- Illustration -->
+    <ImageView
+        android:id="@+id/illustration"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="60dp"
+        android:contentDescription="@string/illustration"
+        android:src="@drawable/illustration"
+        tools:ignore="ImageContrastCheck" />
+
+    <!-- Text: Challenge and Strength -->
+    <TextView
+        android:id="@+id/text_heading"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/illustration"
+        android:layout_marginTop="20dp"
+        android:layout_marginStart="70dp"
+        android:layout_marginEnd="70dp"
+        android:textSize="24sp"
+        android:fontFamily="@font/montserrat_bold"
+        android:textAlignment="center"
+        android:lineSpacingExtra="3dp"
+        android:textColor="@color/black"/>
+
+    <!-- Subtitle -->
+    <TextView
+        android:id="@+id/text_subtitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/text_heading"
+        android:layout_marginTop="20dp"
+        android:layout_marginStart="60dp"
+        android:layout_marginEnd="60dp"
+        android:layout_centerHorizontal="true"
+        android:text="Effectively manage your tasks, notes, agendas, and savings effortlessly with this app!"
+        android:textSize="15sp"
+        android:fontFamily="@font/montserrat_light"
+        android:textAlignment="center"
+        android:textColor="@color/black"
+        tools:ignore="HardcodedText" />
+
+    <!-- Button -->
+    <Button
+        android:id="@+id/startBtn"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_below="@id/text_subtitle"
+        android:layout_centerHorizontal="true"
+        android:layout_marginStart="40dp"
+        android:layout_marginTop="55dp"
+        android:layout_marginEnd="40dp"
+        android:backgroundTint="@color/primary"
+        android:fontFamily="@font/montserrat_bold"
+        android:text="GET STARTED"
+        android:textColor="@color/white"
+        tools:ignore="HardcodedText,TouchTargetSizeCheck,VisualLintButtonSize" />
+
+</RelativeLayout>

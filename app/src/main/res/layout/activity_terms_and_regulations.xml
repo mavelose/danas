@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".TermsAndRegulationsActivity">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="10dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:orientation="vertical"
+            android:paddingTop="70dp"
+            app:layout_constraintBottom_toBottomOf="parent" >
+
+            <!-- Title -->
+            <TextView
+                android:id="@+id/title_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/montserrat_black"
+                android:text="Terms and Regulations"
+                android:textColor="@color/primary"
+                android:textSize="24sp"
+                tools:ignore="HardcodedText" />
+
+            <!-- Subtitle -->
+            <TextView
+                android:id="@+id/terms_subtitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/text_heading"
+                android:layout_marginTop="20dp"
+                android:layout_marginStart="60dp"
+                android:layout_marginEnd="60dp"
+                android:layout_centerHorizontal="true"
+                android:text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse efficitur varius lorem, vel facilisis tortor euismod nec. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Nam aliquet, felis in fringilla condimentum, mauris libero malesuada odio, at interdum neque sapien id dolor. Cras at enim at velit efficitur aliquam sed nec lectus. Ut sagittis fermentum lectus ac vulputate. Vivamus venenatis purus et sapien interdum, ac tincidunt lorem lacinia. Nullam ornare felis sed magna bibendum, eget malesuada nulla vestibulum. Mauris sit amet libero sit amet arcu tincidunt hendrerit. Quisque blandit ligula at velit tincidunt, a vehicula tortor varius. Integer consectetur, nisi in porttitor vestibulum, arcu nulla gravida quam, id posuere orci neque vitae lacus. Etiam quis volutpat nulla, at dictum arcu. Fusce ultrices tellus in tincidunt fringilla. Fusce tempus, nulla nec pulvinar pellentesque, sapien velit gravida justo, a vulputate tortor eros non purus. Proin auctor dui a efficitur auctor. Donec nec arcu id lacus scelerisque pharetra nec non est."
+                android:textSize="10sp"
+                android:fontFamily="@font/montserrat_regular"
+                android:textAlignment="center"
+                android:textColor="@color/black"
+                tools:ignore="HardcodedText" />
+
+            <!-- Subtitle -->
+            <TextView
+                android:id="@+id/terms_subtitle2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/text_heading"
+                android:layout_marginTop="20dp"
+                android:layout_marginStart="60dp"
+                android:layout_marginEnd="60dp"
+                android:layout_centerHorizontal="true"
+                android:text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse efficitur varius lorem, vel facilisis tortor euismod nec. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Nam aliquet, felis in fringilla condimentum, mauris libero malesuada odio, at interdum neque sapien id dolor. Cras at enim at velit efficitur aliquam sed nec lectus. Ut sagittis fermentum lectus ac vulputate. Vivamus venenatis purus et sapien interdum, ac tincidunt lorem lacinia. Nullam ornare felis sed magna bibendum, eget malesuada nulla vestibulum. Mauris sit amet libero sit amet arcu tincidunt hendrerit. Quisque blandit ligula at velit tincidunt, a vehicula tortor varius. Integer consectetur, nisi in porttitor vestibulum, arcu nulla gravida quam, id posuere orci neque vitae lacus. Etiam quis volutpat nulla, at dictum arcu. Fusce ultrices tellus in tincidunt fringilla. Fusce tempus, nulla nec pulvinar pellentesque, sapien velit gravida justo, a vulputate tortor eros non purus. Proin auctor dui a efficitur auctor. Donec nec arcu id lacus scelerisque pharetra nec non est."
+                android:textSize="10sp"
+                android:fontFamily="@font/montserrat_regular"
+                android:textAlignment="center"
+                android:textColor="@color/black"
+                tools:ignore="HardcodedText" />
+
+            <!-- Subtitle -->
+            <TextView
+                android:id="@+id/terms_subtitle3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/text_heading"
+                android:layout_marginTop="20dp"
+                android:layout_marginStart="60dp"
+                android:layout_marginEnd="60dp"
+                android:layout_centerHorizontal="true"
+                android:text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse efficitur varius lorem, vel facilisis tortor euismod nec. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Nam aliquet, felis in fringilla condimentum, mauris libero malesuada odio, at interdum neque sapien id dolor. Cras at enim at velit efficitur aliquam sed nec lectus. Ut sagittis fermentum lectus ac vulputate. Vivamus venenatis purus et sapien interdum, ac tincidunt lorem lacinia. Nullam ornare felis sed magna bibendum, eget malesuada nulla vestibulum. Mauris sit amet libero sit amet arcu tincidunt hendrerit. Quisque blandit ligula at velit tincidunt, a vehicula tortor varius. Integer consectetur, nisi in porttitor vestibulum, arcu nulla gravida quam, id posuere orci neque vitae lacus. Etiam quis volutpat nulla, at dictum arcu. Fusce ultrices tellus in tincidunt fringilla. Fusce tempus, nulla nec pulvinar pellentesque, sapien velit gravida justo, a vulputate tortor eros non purus. Proin auctor dui a efficitur auctor. Donec nec arcu id lacus scelerisque pharetra nec non est."
+                android:textSize="10sp"
+                android:fontFamily="@font/montserrat_regular"
+                android:textAlignment="center"
+                android:textColor="@color/black"
+                tools:ignore="HardcodedText" />
+
+            <!-- I Understand Button -->
+            <Button
+                android:id="@+id/understand_button"
+                android:layout_width="match_parent"
+                android:layout_height="56dp"
+                android:layout_marginStart="30dp"
+                android:layout_marginTop="30dp"
+                android:layout_marginEnd="30dp"
+                android:layout_marginBottom="25dp"
+                android:backgroundTint="@color/primary"
+                android:fontFamily="@font/montserrat_bold"
+                android:text="I UNDERSTAND"
+                android:textColor="@color/white"
+                android:textSize="15sp"
+                tools:ignore="HardcodedText,VisualLintButtonSize,VisualLintBounds" />
+
+        </LinearLayout>
+    </ScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

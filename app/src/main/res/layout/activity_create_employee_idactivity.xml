@@ -1,0 +1,218 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".CreateEmployeeIDActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:orientation="vertical"
+        android:paddingTop="70dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        tools:ignore="MissingConstraints"> <!-- Added padding to push all contents downward -->
+
+        <!-- Logo -->
+        <ImageView
+            android:id="@+id/logo"
+            android:layout_width="110dp"
+            android:layout_height="110dp"
+            android:layout_marginBottom="20dp"
+            android:src="@drawable/logo"
+            tools:ignore="ContentDescription" />
+
+        <!-- Title -->
+        <TextView
+            android:id="@+id/welcome_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/montserrat_bold"
+            android:text="Welcome to D.A.N.A.S."
+            android:textColor="@color/primary"
+            android:textSize="24sp"
+            tools:ignore="HardcodedText" />
+
+        <!-- Subtitle -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="20dp"
+            android:fontFamily="@font/montserrat_medium"
+            android:gravity="center"
+            android:text="Daily Assistant for Notes, Agenda, and Savings"
+            android:textColor="@color/primary"
+            android:textSize="10sp"
+            tools:ignore="HardcodedText,SmallSp" />
+
+        <!-- Subtitle -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="50dp"
+            android:fontFamily="@font/montserrat_bold"
+            android:gravity="center"
+            android:text="For Students, By Students"
+            android:textColor="@color/gray_dark"
+            android:textSize="10sp"
+            tools:ignore="HardcodedText,SmallSp" />
+
+        <!-- Subtitle -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="30dp"
+            android:fontFamily="@font/montserrat_regular"
+            android:gravity="center"
+            android:text="Create Employee ID"
+            android:textColor="@color/gray_dark"
+            android:textSize="20sp"
+            tools:ignore="HardcodedText" />
+
+        <!-- Company Subtitle -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="start"
+            android:layout_marginStart="50dp"
+            android:layout_marginBottom="5dp"
+            android:fontFamily="@font/montserrat_bold"
+            android:text="Company"
+            android:textColor="@color/gray_dark"
+            android:textSize="10sp"
+            tools:ignore="HardcodedText,SmallSp" />
+
+        <!-- Company Input -->
+        <EditText
+            android:id="@+id/company_input"
+            android:layout_width="match_parent"
+            android:layout_height="52dp"
+            android:layout_marginStart="30dp"
+            android:layout_marginEnd="30dp"
+            android:layout_marginBottom="25dp"
+            android:background="@drawable/edittext_background"
+            android:fontFamily="@font/montserrat_bold"
+            android:gravity="start|center_vertical"
+            android:hint="Enter company"
+            android:inputType="textPersonName"
+            android:paddingStart="20dp"
+            android:paddingEnd="20dp"
+            android:textColorHint="@color/gray_dark"
+            android:textSize="10sp"
+            tools:ignore="Autofill,HardcodedText,SmallSp,TextContrastCheck,VisualLintTextFieldSize" />
+
+        <!-- Role Subtitle -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="start"
+            android:layout_marginStart="50dp"
+            android:layout_marginBottom="5dp"
+            android:fontFamily="@font/montserrat_bold"
+            android:text="Role"
+            android:textColor="@color/gray_dark"
+            android:textSize="10sp"
+            tools:ignore="HardcodedText,SmallSp" />
+
+        <!-- Role Input -->
+        <EditText
+            android:id="@+id/role_input"
+            android:layout_width="match_parent"
+            android:layout_height="52dp"
+            android:layout_marginStart="30dp"
+            android:layout_marginEnd="30dp"
+            android:layout_marginBottom="25dp"
+            android:background="@drawable/edittext_background"
+            android:fontFamily="@font/montserrat_bold"
+            android:gravity="start|center_vertical"
+            android:hint="Enter role"
+            android:inputType="textPersonName"
+            android:paddingStart="20dp"
+            android:paddingEnd="20dp"
+            android:textColorHint="@color/gray_dark"
+            android:textSize="10sp"
+            tools:ignore="Autofill,HardcodedText,SmallSp,TextContrastCheck,VisualLintTextFieldSize" />
+
+        <!-- Number of Jobs Subtitle -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="start"
+            android:layout_marginStart="50dp"
+            android:layout_marginBottom="5dp"
+            android:fontFamily="@font/montserrat_bold"
+            android:text="Number of Jobs"
+            android:textColor="@color/gray_dark"
+            android:textSize="10sp"
+            tools:ignore="HardcodedText,SmallSp" />
+
+        <!-- Number of Jobs Input -->
+        <EditText
+            android:id="@+id/jobs_input"
+            android:layout_width="match_parent"
+            android:layout_height="52dp"
+            android:layout_marginStart="30dp"
+            android:layout_marginEnd="30dp"
+            android:layout_marginBottom="5dp"
+            android:background="@drawable/edittext_background"
+            android:fontFamily="@font/montserrat_bold"
+            android:gravity="start|center_vertical"
+            android:hint="Select number of jobs"
+            android:inputType="textCapWords"
+            android:paddingStart="20dp"
+            android:paddingEnd="20dp"
+            android:textColorHint="@color/gray_dark"
+            android:textSize="10sp"
+            tools:ignore="Autofill,HardcodedText,SmallSp,TextContrastCheck,VisualLintTextFieldSize" />
+
+        <!-- Next Button -->
+        <Button
+            android:id="@+id/save_button"
+            android:layout_width="match_parent"
+            android:layout_height="56dp"
+            android:layout_marginStart="30dp"
+            android:layout_marginTop="30dp"
+            android:layout_marginEnd="30dp"
+            android:layout_marginBottom="15dp"
+            android:backgroundTint="@color/primary"
+            android:fontFamily="@font/montserrat_bold"
+            android:text="SAVE"
+            android:textColor="@color/white"
+            android:textSize="15sp"
+            tools:ignore="HardcodedText,VisualLintButtonSize,VisualLintBounds" />
+
+        <!-- Terms and Regulations -->
+        <TextView
+            android:id="@+id/regulations_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:clickable="true"
+            android:focusable="true"
+            android:gravity="center"
+            android:text="By clicking 'SAVE' you are agreeing to our application's"
+            android:textColor="@color/gray_dark"
+            android:fontFamily="@font/montserrat_regular"
+            android:textSize="10sp" />
+
+        <!-- Terms and Regulations -->
+        <TextView
+            android:id="@+id/terms_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="25dp"
+            android:clickable="true"
+            android:focusable="true"
+            android:gravity="center"
+            android:text="Terms and Regulations."
+            android:textColor="@color/primary"
+            android:fontFamily="@font/montserrat_bold"
+            android:textSize="10sp" />
+
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

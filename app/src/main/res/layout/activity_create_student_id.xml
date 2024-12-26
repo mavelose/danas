@@ -1,0 +1,250 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".CreateStudentIDActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:gravity="center_horizontal"
+        android:paddingTop="110dp"> <!-- Added padding to push all contents downward -->
+
+        <!-- Logo -->
+        <ImageView
+            android:id="@+id/logo"
+            android:layout_width="110dp"
+            android:layout_height="110dp"
+            android:layout_marginBottom="20dp"
+            android:src="@drawable/logo"
+            tools:ignore="ContentDescription" />
+
+        <!-- Title -->
+        <TextView
+            android:id="@+id/welcome_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Welcome to D.A.N.A.S."
+            android:textSize="24sp"
+            android:fontFamily="@font/montserrat_bold"
+            android:textColor="@color/primary"
+            tools:ignore="HardcodedText" />
+
+        <!-- Subtitle -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Daily Assistant for Notes, Agenda, and Savings"
+            android:textSize="10sp"
+            android:fontFamily="@font/montserrat_medium"
+            android:textColor="@color/primary"
+            android:gravity="center"
+            android:layout_marginBottom="20dp"
+            tools:ignore="HardcodedText,SmallSp" />
+
+        <!-- Subtitle -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="For Students, By Students"
+            android:textSize="10sp"
+            android:fontFamily="@font/montserrat_bold"
+            android:textColor="@color/gray_dark"
+            android:gravity="center"
+            android:layout_marginBottom="50dp"
+            tools:ignore="HardcodedText,SmallSp" />
+
+        <!-- Subtitle -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Create Student ID"
+            android:textSize="20sp"
+            android:fontFamily="@font/montserrat_regular"
+            android:textColor="@color/gray_dark"
+            android:gravity="center"
+            android:layout_marginBottom="30dp"
+            tools:ignore="HardcodedText" />
+
+        <!-- First Name Subtitle -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="First Name"
+            android:textSize="10sp"
+            android:fontFamily="@font/montserrat_bold"
+            android:textColor="@color/gray_dark"
+            android:layout_marginBottom="5dp"
+            android:layout_marginStart="50dp"
+            android:layout_gravity="start"
+            tools:ignore="HardcodedText,SmallSp" />
+
+        <!-- First Name Input -->
+        <EditText
+            android:id="@+id/firstname_input"
+            android:layout_width="match_parent"
+            android:layout_height="52dp"
+            android:layout_marginStart="30dp"
+            android:layout_marginEnd="30dp"
+            android:layout_marginBottom="25dp"
+            android:background="@drawable/edittext_background"
+            android:fontFamily="@font/montserrat_bold"
+            android:gravity="start|center_vertical"
+            android:hint="Enter first name"
+            android:inputType="textPersonName"
+            android:paddingStart="20dp"
+            android:paddingEnd="20dp"
+            android:textColorHint="@color/gray_dark"
+            android:textSize="10sp"
+            tools:ignore="Autofill,HardcodedText,SmallSp,TextContrastCheck,VisualLintTextFieldSize" />
+
+        <!-- Last Name Subtitle -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Last Name"
+            android:textSize="10sp"
+            android:fontFamily="@font/montserrat_bold"
+            android:textColor="@color/gray_dark"
+            android:layout_marginBottom="5dp"
+            android:layout_marginStart="50dp"
+            android:layout_gravity="start"
+            tools:ignore="HardcodedText,SmallSp" />
+
+        <!-- Last Name Input -->
+        <EditText
+            android:id="@+id/lastname_input"
+            android:layout_width="match_parent"
+            android:layout_height="52dp"
+            android:layout_marginStart="30dp"
+            android:layout_marginEnd="30dp"
+            android:layout_marginBottom="25dp"
+            android:background="@drawable/edittext_background"
+            android:fontFamily="@font/montserrat_bold"
+            android:gravity="start|center_vertical"
+            android:hint="Enter last name"
+            android:inputType="textPersonName"
+            android:paddingStart="20dp"
+            android:paddingEnd="20dp"
+            android:textColorHint="@color/gray_dark"
+            android:textSize="10sp"
+            tools:ignore="Autofill,HardcodedText,SmallSp,TextContrastCheck,VisualLintTextFieldSize" />
+
+        <!-- University Subtitle -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="University"
+            android:textSize="10sp"
+            android:fontFamily="@font/montserrat_bold"
+            android:textColor="@color/gray_dark"
+            android:layout_marginBottom="5dp"
+            android:layout_marginStart="50dp"
+            android:layout_gravity="start"
+            tools:ignore="HardcodedText,SmallSp" />
+
+        <!-- University Input -->
+        <EditText
+            android:id="@+id/university_input"
+            android:layout_width="match_parent"
+            android:layout_height="52dp"
+            android:layout_marginStart="30dp"
+            android:layout_marginEnd="30dp"
+            android:layout_marginBottom="25dp"
+            android:background="@drawable/edittext_background"
+            android:fontFamily="@font/montserrat_bold"
+            android:gravity="start|center_vertical"
+            android:hint="Enter university"
+            android:inputType="textCapWords"
+            android:paddingStart="20dp"
+            android:paddingEnd="20dp"
+            android:textColorHint="@color/gray_dark"
+            android:textSize="10sp"
+            tools:ignore="Autofill,HardcodedText,SmallSp,TextContrastCheck,VisualLintTextFieldSize" />
+
+        <!-- Program Subtitle -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Program"
+            android:textSize="10sp"
+            android:fontFamily="@font/montserrat_bold"
+            android:textColor="@color/gray_dark"
+            android:layout_marginBottom="5dp"
+            android:layout_marginStart="50dp"
+            android:layout_gravity="start"
+            tools:ignore="HardcodedText,SmallSp" />
+
+        <!-- Program Input -->
+        <EditText
+            android:id="@+id/program_input"
+            android:layout_width="match_parent"
+            android:layout_height="52dp"
+            android:layout_marginStart="30dp"
+            android:layout_marginEnd="30dp"
+            android:layout_marginBottom="25dp"
+            android:background="@drawable/edittext_background"
+            android:fontFamily="@font/montserrat_bold"
+            android:gravity="start|center_vertical"
+            android:hint="Enter program"
+            android:inputType="textCapWords"
+            android:paddingStart="20dp"
+            android:paddingEnd="20dp"
+            android:textColorHint="@color/gray_dark"
+            android:textSize="10sp"
+            tools:ignore="Autofill,HardcodedText,SmallSp,TextContrastCheck,VisualLintTextFieldSize,DuplicateSpeakableTextCheck" />
+
+        <!-- Year Level Subtitle -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Year Level"
+            android:textSize="10sp"
+            android:fontFamily="@font/montserrat_bold"
+            android:textColor="@color/gray_dark"
+            android:layout_marginBottom="5dp"
+            android:layout_marginStart="50dp"
+            android:layout_gravity="start"
+            tools:ignore="HardcodedText,SmallSp" />
+
+        <!-- Year Level Input -->
+        <EditText
+            android:id="@+id/yearlevel_input"
+            android:layout_width="match_parent"
+            android:layout_height="52dp"
+            android:layout_marginStart="30dp"
+            android:layout_marginEnd="30dp"
+            android:layout_marginBottom="5dp"
+            android:background="@drawable/edittext_background"
+            android:fontFamily="@font/montserrat_bold"
+            android:gravity="start|center_vertical"
+            android:hint="Enter year level"
+            android:inputType="number"
+            android:paddingStart="20dp"
+            android:paddingEnd="20dp"
+            android:textColorHint="@color/gray_dark"
+            android:textSize="10sp"
+            tools:ignore="Autofill,HardcodedText,SmallSp,TextContrastCheck,VisualLintTextFieldSize" />
+
+        <!-- Next Button -->
+        <Button
+            android:id="@+id/next_button"
+            android:layout_width="match_parent"
+            android:layout_height="56dp"
+            android:layout_marginStart="30dp"
+            android:layout_marginEnd="30dp"
+            android:backgroundTint="@color/primary"
+            android:text="NEXT"
+            android:textColor="@color/white"
+            android:fontFamily="@font/montserrat_bold"
+            android:textSize="15sp"
+            android:layout_marginTop="30dp"
+            android:layout_marginBottom="25dp"
+            tools:ignore="HardcodedText,VisualLintButtonSize" />
+
+    </LinearLayout>
+</ScrollView>
