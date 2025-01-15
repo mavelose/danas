@@ -13,6 +13,27 @@
         android:theme="@style/Theme.DANAS"
         tools:targetApi="31">
         <activity
+            android:name=".AddFolderSchool"
+            android:exported="false" />
+        <activity
+            android:name=".ProfileFragment"
+            android:exported="false" />
+        <activity
+            android:name=".WorkFragment"
+            android:exported="false" />
+        <activity
+            android:name=".SchoolFragment"
+            android:exported="false" />
+        <activity
+            android:name=".HomeFragment"
+            android:exported="false" />
+        <activity
+            android:name=".MainActivity"
+            android:exported="false" />
+        <activity
+            android:name=".CreatingActivity"
+            android:exported="false" />
+        <activity
             android:name=".TermsAndRegulationsActivity"
             android:exported="false" />
         <activity

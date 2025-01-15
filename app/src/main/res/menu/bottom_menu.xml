@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/home"
+        android:title="@string/title_home"
+        android:icon="@drawable/home_selector"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+
+    <item
+        android:id="@+id/school"
+        android:title="@string/title_school"
+        android:icon="@drawable/school_selector"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+
+    <item
+        android:id="@+id/work"
+        android:title="@string/title_work"
+        android:icon="@drawable/work_selector"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+
+    <item
+        android:id="@+id/profile"
+        android:title="@string/title_profile"
+        android:icon="@drawable/profile_selector"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+</menu>

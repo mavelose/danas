@@ -1,4 +1,16 @@
 <resources>
     <string name="app_name">DANAS</string>
     <string name="illustration">Illustration</string>
+    <string name="title_home">Home</string>
+    <string name="title_school">School</string>
+    <string name="title_work">Work</string>
+    <string name="title_profile">Profile</string>
+    <string name="btn_add">Add Folder</string>
+    <string name="txt_for_school">For School</string>
+    <string name="img_for_school">School Watermark Icon</string>
+    <string name="txt_add_a_folder_school">Add a Folder</string>
+    <string name="txt_add_a_folder_school_submit">Add Folder</string>
+    <string name="txt_add_a_folder_school_cancel">Cancel</string>
+    <string name="img_for_work">Work Watermark Icon</string>
+    <string name="txt_for_work">For Work</string>
 </resources>

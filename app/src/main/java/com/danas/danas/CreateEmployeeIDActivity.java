@@ -55,6 +55,9 @@ public class CreateEmployeeIDActivity extends AppCompatActivity {
         saveButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                Intent intent = new Intent(CreateEmployeeIDActivity.this, CreatingActivity.class);
+                startActivity(intent);
+
                 // Get input data
                 String company = companyInput.getText().toString().trim();
                 String role = roleInput.getText().toString().trim();
