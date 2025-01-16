@@ -160,7 +160,7 @@
             android:background="@drawable/edittext_background"
             android:fontFamily="@font/montserrat_bold"
             android:gravity="start|center_vertical"
-            android:hint="Select number of jobs"
+            android:hint="Enter number of jobs"
             android:inputType="textCapWords"
             android:paddingStart="20dp"
             android:paddingEnd="20dp"
