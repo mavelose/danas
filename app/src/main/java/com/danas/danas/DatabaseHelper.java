@@ -2,6 +2,7 @@ package com.danas.danas;
 
 import android.content.ContentValues;
 import android.content.Context;
+import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
 import android.util.Log;
@@ -115,4 +116,19 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         context.deleteDatabase(DATABASE_NAME);
         Log.d("DatabaseHelper", "Database deleted successfully");
     }
+
+    // Method to get student data
+    public Cursor getStudentData() {
+        SQLiteDatabase db = this.getReadableDatabase();
+        String query = "SELECT * FROM " + TABLE_STUDENT;
+        return db.rawQuery(query, null);
+    }
+
+    // Method to get employee data
+    public Cursor getEmployeeData() {
+        SQLiteDatabase db = this.getReadableDatabase();
+        String query = "SELECT * FROM " + TABLE_EMPLOYEE;
+        return db.rawQuery(query, null);
+    }
+
 }

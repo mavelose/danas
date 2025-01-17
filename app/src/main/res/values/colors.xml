@@ -6,6 +6,7 @@
     <color name="gray_light">#E1E4E8</color> <!-- Light background -->
     <color name="gray">#D1D5DB</color> <!-- Border -->
     <color name="gray_dark">#6B7280</color> <!-- Text hint color -->
+    <color name="red">#FF0004</color>
 
     <color name="primary">#131E3A</color>
     <color name="secondary">#FFFFFFFF</color>
