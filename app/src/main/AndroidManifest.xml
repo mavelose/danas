@@ -13,6 +13,9 @@
         android:theme="@style/Theme.DANAS"
         tools:targetApi="31">
         <activity
+            android:name=".AddFolderWork"
+            android:exported="false" />
+        <activity
             android:name=".EditProfileFragment"
             android:exported="false" />
         <activity
