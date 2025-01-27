@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <!-- Background layer with stroke -->
+    <item android:id="@android:id/background">
+        <shape android:shape="rectangle">
+            <solid android:color="@color/white" /> <!-- Background color -->
+            <corners android:radius="10dp" /> <!-- Rounded corners -->
+            <stroke
+                android:width="2dp"
+                android:color="@color/primary" /> <!-- Stroke properties -->
+        </shape>
+    </item>
+
+    <!-- Progress bar layer -->
+    <item android:id="@+id/progressBar">
+        <clip>
+            <shape android:shape="rectangle">
+                <solid android:color="@color/primary" /> <!-- Progress color -->
+                <corners android:radius="8dp" /> <!-- Match background corners -->
+            </shape>
+        </clip>
+    </item>
+</layer-list>
+

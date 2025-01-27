@@ -1,125 +1,103 @@
 package com.danas.danas;
 
-import android.database.Cursor;
+import android.content.Intent;
+import android.graphics.Bitmap;
+import android.graphics.BitmapFactory;
 import android.os.Bundle;
-
-import androidx.fragment.app.Fragment;
-import androidx.fragment.app.FragmentTransaction;
-
+import android.os.Handler;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.app.Dialog;
 import android.widget.Button;
-import android.widget.TextView;
+import android.widget.ImageButton;
+import android.widget.Toast;
+
+import androidx.annotation.NonNull;
+import androidx.fragment.app.Fragment;
+import androidx.fragment.app.FragmentTransaction;
+
+import java.util.Objects;
 
 public class ProfileFragment extends Fragment {
 
+    private Dialog dialog;
+    private ImageButton profilePic;
+
     @Override
-    public View onCreateView(LayoutInflater inflater, ViewGroup container,
-                             Bundle savedInstanceState) {
-        // Inflate the layout for this fragment
-        View rootView = inflater.inflate(R.layout.fragment_profile, container, false);
+    public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
+        View view = inflater.inflate(R.layout.fragment_profile, container, false);
 
-        // Initialize the DatabaseHelper
-        DatabaseHelper dbHelper = new DatabaseHelper(getContext());
+        profilePic = view.findViewById(R.id.btn_edit_profile); // Match with your layout's ImageView ID
 
-        // Initialize the TextViews
-        TextView txtName = rootView.findViewById(R.id.txt_name);
-        TextView txtPosition = rootView.findViewById(R.id.txt_position);
+        // Fetch the profile picture from database
+        DatabaseHelper dbHelper = new DatabaseHelper(requireContext());
+        byte[] imageBytes = dbHelper.getProfilePicture();
 
-        // Fetch data from database
-        Cursor studentCursor = dbHelper.getStudentData();
-        Cursor employeeCursor = dbHelper.getEmployeeData();
-
-        // Set data for student
-        if (studentCursor != null && studentCursor.moveToFirst()) {
-            // Ensure column indices are valid
-            int firstNameIndex = studentCursor.getColumnIndex(DatabaseHelper.COLUMN_FIRST_NAME);
-            int lastNameIndex = studentCursor.getColumnIndex(DatabaseHelper.COLUMN_LAST_NAME);
-            int programIndex = studentCursor.getColumnIndex(DatabaseHelper.COLUMN_PROGRAM);
-            int yearLevelIndex = studentCursor.getColumnIndex(DatabaseHelper.COLUMN_YEAR_LEVEL);
-
-            if (firstNameIndex != -1 && lastNameIndex != -1 && programIndex != -1 && yearLevelIndex != -1) {
-                String firstName = studentCursor.getString(firstNameIndex);
-                String lastName = studentCursor.getString(lastNameIndex);
-                String program = studentCursor.getString(programIndex);
-                int yearLevel = studentCursor.getInt(yearLevelIndex);
-
-                // Format the student's full name
-                txtName.setText(getString(R.string.student_name, firstName, lastName));
-
-                // Format the student's year level with suffix and program
-                String yearWithSuffix = getYearWithSuffix(yearLevel);
-                String position = getString(R.string.student_info, yearWithSuffix, program);
-                txtPosition.setText(position);
-            }
+        if (imageBytes != null) {
+            Bitmap bitmap = BitmapFactory.decodeByteArray(imageBytes, 0, imageBytes.length);
+            profilePic.setImageBitmap(bitmap);
+        } else {
+            profilePic.setImageResource(R.drawable.placeholder_dpicon); // Default image if no image is available
         }
 
-        // Set data for employee role (assuming only one employee record for now)
-        if (employeeCursor != null && employeeCursor.moveToFirst()) {
-            int roleIndex = employeeCursor.getColumnIndex(DatabaseHelper.COLUMN_ROLE);
-
-            if (roleIndex != -1) {
-                String role = employeeCursor.getString(roleIndex);
-                String formattedRole = formatRole(role);  // Capitalize role text
-                txtPosition.append("\n" + formattedRole);  // Appending to the same TextView
+        ImageButton btn_logout = view.findViewById(R.id.btn_logout);
+        btn_logout.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                showLogoutDialog();
             }
-        }
+        });
 
-        // Close cursors
-        if (studentCursor != null) studentCursor.close();
-        if (employeeCursor != null) employeeCursor.close();
-
-        // Set up the Edit Profile Button click listener
-        Button btnEditProfile = rootView.findViewById(R.id.btn_edit_profile);
-        btnEditProfile.setOnClickListener(v -> {
-            // Create a new EditProfileFragment
-            EditProfileFragment editProfileFragment = new EditProfileFragment();
-
-            // Replace the current fragment with the EditProfileFragment
-            FragmentTransaction transaction = getParentFragmentManager().beginTransaction();
-            transaction.replace(R.id.frameLayout, editProfileFragment); // Ensure your container ID is correct
-            transaction.addToBackStack(null); // Add to back stack to navigate back
+        ImageButton editButton = view.findViewById(R.id.btn_edit);
+        editButton.setOnClickListener(v -> {
+            // Replace ProfileFragment with ProfileEditFragment
+            FragmentTransaction transaction = requireActivity().getSupportFragmentManager().beginTransaction();
+            transaction.replace(R.id.frameLayout, new ProfileEditFragment());
+            transaction.addToBackStack(null); // Add to back stack for back navigation
             transaction.commit();
         });
 
-        return rootView;
+        return view;
     }
 
-    // Helper method to get the year level with the correct suffix
-    private String getYearWithSuffix(int yearLevel) {
-        String suffix;
-        switch (yearLevel) {
-            case 1:
-                suffix = "st";
-                break;
-            case 2:
-                suffix = "nd";
-                break;
-            case 3:
-                suffix = "rd";
-                break;
-            default:
-                suffix = "th";
-                break;
-        }
-        return yearLevel + suffix;
-    }
+    private void showLogoutDialog() {
+        dialog = new Dialog(requireActivity());
+        dialog.setContentView(R.layout.dialog_logout);
+        Objects.requireNonNull(dialog.getWindow()).setLayout(ViewGroup.LayoutParams.WRAP_CONTENT, ViewGroup.LayoutParams.WRAP_CONTENT);
+        dialog.setCancelable(false);
 
-    // Helper method to format the role with the first letter of each word in uppercase
-    private String formatRole(String role) {
-        String[] words = role.split(" ");
-        StringBuilder formattedRole = new StringBuilder();
+        Button btnCancel = dialog.findViewById(R.id.btn_cancel);
+        Button btnConfirm = dialog.findViewById(R.id.btn_confirm);
 
-        for (String word : words) {
-            if (!word.isEmpty()) {
-                formattedRole.append(word.substring(0, 1).toUpperCase())
-                        .append(word.substring(1).toLowerCase())
-                        .append(" ");
+        btnCancel.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                dialog.dismiss();
             }
-        }
+        });
 
-        // Remove the trailing space
-        return formattedRole.toString().trim();
+        btnConfirm.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                showLoadingDialog();
+                new Handler().postDelayed(() -> {
+                    Intent intent = new Intent(requireActivity(), MainActivity.class);
+                    startActivity(intent);
+                    Toast.makeText(requireActivity(), "Logout Successful!", Toast.LENGTH_SHORT).show();
+                    dialog.dismiss();
+                }, 3000); // 3-second delay before starting MainActivity
+            }
+        });
+
+        dialog.show();
+    }
+
+    private void showLoadingDialog() {
+        Dialog loadingDialog = new Dialog(requireActivity());
+        loadingDialog.setContentView(R.layout.dialog_loading); // Your custom loading layout
+        Objects.requireNonNull(loadingDialog.getWindow()).setLayout(ViewGroup.LayoutParams.WRAP_CONTENT, ViewGroup.LayoutParams.WRAP_CONTENT);
+        loadingDialog.setCancelable(false);
+        loadingDialog.show();
     }
 }
